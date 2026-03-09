@@ -27,25 +27,8 @@ export const aboutInfo = [
       "I care about clean design and smooth user experiences while building web applications.",
     color: "text-pink",
   },
-];
-
-export const workData = [
-  {
-    role: "Senior Frontend Developer",
-    company: "TechCorp Inc.",
-    duration: "2020 - Present",
-    description:
-      "Leading frontend development for enterprise clients, implementing modern frameworks, and mentoring junior developers.",
-    color: "purple",
-  },
-  {
-    role: "Web Developer",
-    company: "Digital Solutions LLC",
-    duration: "2018 - 2020",
-    description:
-      "Developed and maintained web applications for various clients, focusing on responsive design and performance optimization.",
-    color: "pink",
-  },
+  
+  
 ];
 
 export const projects = [
