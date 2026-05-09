@@ -160,7 +160,7 @@ const ProjectCard = ({ title, description, image, tech }) => {
             <FaExternalLinkAlt size={11} />
             Demo Soon
           </a>
-          <a href="#" style={{
+          <a href="https://github.com/jitmondal-it/ecommerce-project" style={{
             flex: 1,
             display: "flex",
             alignItems: "center",
@@ -191,7 +191,7 @@ const ProjectCard = ({ title, description, image, tech }) => {
             }}
           >
             <FaGithub size={13} />
-            Code Soon
+            View Code 
           </a>
         </div>
       </div>
