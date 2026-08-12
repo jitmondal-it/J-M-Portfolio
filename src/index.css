@@ -34,3 +34,10 @@
   from, to { border-color: transparent; }
   100% { border-color: #8b5cf6; }
 }
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 100px;
+}

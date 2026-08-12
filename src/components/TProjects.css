@@ -1,0 +1,131 @@
+.projects-wrapper {
+  background: linear-gradient(
+    180deg,
+    #111111 0%,
+    #1a1a1a 50%,
+    #111111 100%
+  );
+}
+
+.projects-section {
+  font-family: "Saira", sans-serif;
+}
+
+.projects-grid {
+  z-index: 0;
+}
+
+/* Heading */
+
+.projects-heading-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.heading-line {
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+}
+
+.heading-line.left {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #8b5cf6
+  );
+}
+
+.heading-line.right {
+  background: linear-gradient(
+    90deg,
+    #8b5cf6,
+    transparent
+  );
+}
+
+.projects-tag-label {
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: #c4b5fd;
+}
+
+.projects-heading {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.projects-heading span {
+  background: linear-gradient(
+    135deg,
+    #c4b5fd,
+    #ec4899
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.projects-subtitle {
+  color: rgba(200, 200, 220, 0.5);
+  font-weight: 300;
+  font-size: 0.95rem;
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* View More Button */
+
+.view-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 24px;
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(139, 92, 246, 0.4);
+
+  background: rgba(139, 92, 246, 0.05);
+
+  color: #c4b5fd;
+
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+
+  text-decoration: none;
+
+  backdrop-filter: blur(4px);
+
+  transition: all 0.3s ease;
+}
+
+.view-more-btn:hover {
+  border-color: rgba(139, 92, 246, 0.7);
+
+  background: rgba(139, 92, 246, 0.14);
+
+  color: #fff;
+
+  transform: translateY(-2px);
+}
+
+.view-more-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.view-more-btn:hover svg {
+  transform: translateX(4px);
+}

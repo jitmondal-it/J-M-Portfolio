@@ -36,7 +36,7 @@ export const projects = [
     title: "E-Commerce Platform",
     description:
       "A full-stack e-commerce platform currently under development featuring product management, authentication, and cart functionality.",
-    image: "/project1.jpg", // make sure this image exists in public folder
+    image: "/project-2.jpg", // make sure this image exists in public folder
     tech: [
       "React (Frontend)",
       "Spring Boot (Backend)",
@@ -45,9 +45,29 @@ export const projects = [
       "JWT Auth",
     ],
     icons: [FaReact, FaNodeJs, FaDatabase, FaStripe],
-    demo: "#",
-    code: "#",
+    demo: "https://j-m-portfolio-tau.vercel.app/",
+    code: "https://github.com/jitmondal-it/ecommerce-project",
   },
+  {
+  title: "HireSphere - Job Portal",
+  description:
+    "A full-stack job portal platform that connects job seekers and recruiters, featuring job posting, job search, talent discovery, applications, profiles, and secure JWT-based authentication.",
+  image: "/Project-3.png", // make sure this image exists in public folder
+  tech: [
+    "React (Frontend)",
+    "Tailwind CSS",
+    "Mantine UI",
+    "Spring Boot (Backend)",
+    "MongoDB (Database)",
+    "REST API",
+    "JWT Authentication",
+    "Axios",
+  ],
+  //icons: [FaReact, FaJava, FaDatabase],
+  demo: "#",
+  code: "https://github.com/jitmondal-it/HireSphere",
+},
+  
 ];
 
 export const skills = [

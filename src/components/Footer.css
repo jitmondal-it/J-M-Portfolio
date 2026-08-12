@@ -1,0 +1,103 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+  background: #0f0f14;
+  font-family: "Saira", sans-serif;
+}
+
+/* Top Line */
+
+.footer-top-line {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 92, 246, 0.45),
+    transparent
+  );
+}
+
+/* Content */
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  text-align: center;
+}
+
+/* Logo */
+
+.footer-logo {
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.footer-logo span {
+  background: linear-gradient(
+    135deg,
+    #c4b5fd,
+    #ec4899
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Social Buttons */
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-social-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+
+  background: rgba(139, 92, 246, 0.07);
+
+  border: 1px solid rgba(139, 92, 246, 0.18);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #c4b5fd;
+  font-size: 0.95rem;
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+.footer-social-btn:hover {
+  background: rgba(139, 92, 246, 0.18);
+
+  border-color: rgba(139, 92, 246, 0.45);
+
+  color: #fff;
+
+  transform: translateY(-2px);
+}
+
+/* Copyright */
+
+.footer-copy {
+  font-size: 0.72rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+
+  color: rgba(200, 200, 220, 0.3);
+}

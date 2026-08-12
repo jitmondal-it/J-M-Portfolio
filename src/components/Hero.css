@@ -1,0 +1,240 @@
+.hero-section {
+  background: linear-gradient(
+    180deg,
+    #111111 0%,
+    #1a1a1a 50%,
+    #111111 100%
+  );
+
+  font-family: "Saira", sans-serif;
+}
+
+.hero-grid {
+  z-index: 0;
+}
+
+.hero-name {
+  font-family: "Saira", sans-serif;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  font-size: 4.5rem;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  color: white;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 4px;
+  font-weight: 300;
+}
+
+.role-badge {
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  color: #c084fc;
+}
+
+.role-line {
+  width: 24px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    #8b5cf6,
+    #ec4899
+  );
+}
+
+.hero-description {
+  color: rgba(180, 180, 200, 0.65);
+  font-weight: 300;
+  line-height: 1.8;
+  font-size: 1rem;
+  max-width: 440px;
+}
+
+/* Buttons */
+
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #7c3aed
+  );
+
+  border: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 32px rgba(124, 58, 237, 0.4);
+}
+
+.btn-secondary {
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  background: rgba(139, 92, 246, 0.05);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+
+  color: #d8b4fe;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(139, 92, 246, 0.8);
+
+  background: rgba(139, 92, 246, 0.12);
+
+  transform: translateY(-2px);
+}
+
+/* Rings */
+
+.outer-ring {
+  position: absolute;
+  inset: -24px;
+  border: 1px dashed rgba(139, 92, 246, 0.2);
+  border-radius: 50%;
+  animation: spin 20s linear infinite;
+}
+
+.second-ring {
+  position: absolute;
+  inset: -48px;
+  border: 1px solid rgba(236, 72, 153, 0.08);
+  border-radius: 50%;
+  animation: spin 30s linear infinite reverse;
+}
+
+/* Image */
+
+.glow-border {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+}
+
+.glow-border::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 180deg,
+    #8b5cf6,
+    #ec4899,
+    #8b5cf6
+  );
+
+  z-index: -1;
+  animation: spin 6s linear infinite;
+  opacity: 0.8;
+}
+
+.glow-border::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 180deg,
+    rgba(139, 92, 246, 0.2),
+    transparent,
+    rgba(236, 72, 153, 0.2),
+    transparent
+  );
+
+  z-index: -2;
+  animation: spin 6s linear infinite;
+  filter: blur(8px);
+}
+
+.hero-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* Badge */
+
+.floating-badge {
+  position: absolute;
+  bottom: -12px;
+  right: -20px;
+  background: rgba(15, 15, 25, 0.9);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  border-radius: 12px;
+  padding: 10px 16px;
+  backdrop-filter: blur(12px);
+  z-index: 10;
+}
+
+.badge-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+.badge-text {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(200, 210, 220, 0.8);
+  font-weight: 400;
+}
+
+/* Bottom Line */
+
+.bottom-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 92, 246, 0.2),
+    transparent
+  );
+}
+
+/* Animations */
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
