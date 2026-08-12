@@ -10,7 +10,7 @@ import {
 import { FaStripe } from "react-icons/fa6"; // Stripe icon is in fa6
 
 export const assets = {
-  profileImg: "/profileImg.jpeg",
+  profileImg: "/j-pic.jpeg",
 };
 
 export const aboutInfo = [
