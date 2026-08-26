@@ -487,18 +487,86 @@
   transform: translateY(-1px);
 }
 
-@media (max-width: 768px) {
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
   .hero-resume-btn {
-    right: -125px;
-    bottom: 0;
-    padding: 8px 15px;
-    font-size: 0.72rem;
+    right: -150px;
+    bottom: 105px;
+
+    padding: 9px 17px;
+    font-size: 0.74rem;
   }
 
   .cv-connection {
-    right: -85px;
-    bottom: 12px;
-    width: 120px;
+    width: 145px;
+    height: 105px;
+
+    right: -105px;
+    bottom: 25px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+  .hero-resume-btn {
+    right: -105px;
+    bottom: 75px;
+
+    padding: 8px 15px;
+    font-size: 0.70rem;
+    letter-spacing: 0.04em;
+
+    white-space: nowrap;
+  }
+
+  .cv-connection {
+    width: 115px;
     height: 85px;
+
+    right: -70px;
+    bottom: 5px;
+
+    z-index: 14;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+  .hero-resume-btn {
+    right: -82px;
+    bottom: 58px;
+
+    padding: 7px 12px;
+    font-size: 0.64rem;
+    letter-spacing: 0.03em;
+  }
+
+  .cv-connection {
+    width: 90px;
+    height: 68px;
+
+    right: -52px;
+    bottom: 0;
+  }
+}
+
+/* =========================================
+   MOBILE — HIDE CV STROKE
+   ========================================= */
+
+@media (max-width: 768px) {
+  .cv-connection {
+    display: none;
   }
 }
