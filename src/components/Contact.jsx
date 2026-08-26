@@ -8,6 +8,8 @@ import {
   FaPhone,
 } from "react-icons/fa";
 
+import { SiLeetcode } from "react-icons/si"; 
+
 import "./Contact.css";
 
 const Contact = () => {
@@ -228,16 +230,25 @@ const Contact = () => {
                   rel="noreferrer"
                   className="social-btn"
                 >
-                  <FaGithub />
+                  <FaGithub size={24}/>
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/in/jit-mondal-493a26283/"
+                  href="https://www.linkedin.com/in/jit-mondal-dev/"
                   target="_blank"
                   rel="noreferrer"
                   className="social-btn"
                 >
-                  <FaLinkedin />
+                  <FaLinkedin size={24} />
+                </a>
+
+                <a
+                  href="https://leetcode.com/u/Jit_Mondal2411/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="social-btn"
+                >
+                  <SiLeetcode size={24} />
                 </a>
               </div>
             </div>

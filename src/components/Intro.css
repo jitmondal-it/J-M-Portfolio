@@ -1,0 +1,267 @@
+/* =========================================================
+   INTRO SCREEN
+   ========================================================= */
+
+.intro-screen {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background: #000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 99999;
+
+  overflow: hidden;
+
+  opacity: 1;
+  visibility: visible;
+
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease;
+}
+
+
+/* =========================================================
+   HANDWRITING WRAPPER
+   ========================================================= */
+
+.handwriting-wrapper {
+  width: min(85vw, 700px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   SVG
+   ========================================================= */
+
+.hello-svg {
+  width: 100%;
+  height: auto;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   HELLO HANDWRITING
+   ========================================================= */
+
+.hello-text {
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+
+  font-size: 150px;
+
+  font-weight: 400;
+
+  letter-spacing: 2px;
+
+  fill: transparent;
+
+  stroke: #ffffff;
+
+  stroke-width: 2.2;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+
+  /*
+    Creates the handwriting drawing effect.
+  */
+  stroke-dasharray: 1200;
+
+  stroke-dashoffset: 1200;
+
+  animation:
+    handwriting 3.2s
+    cubic-bezier(0.65, 0, 0.35, 1)
+    forwards,
+
+    fillHello 0.35s
+    ease
+    3s
+    forwards;
+}
+
+
+/* =========================================================
+   HANDWRITING DRAW ANIMATION
+   ========================================================= */
+
+@keyframes handwriting {
+
+  0% {
+    stroke-dashoffset: 1200;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+
+}
+
+
+/* =========================================================
+   FILL AFTER WRITING
+   ========================================================= */
+
+@keyframes fillHello {
+
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: #ffffff;
+  }
+
+}
+
+
+/* =========================================================
+   EXIT
+   ========================================================= */
+
+.intro-screen.intro-exit {
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .handwriting-wrapper {
+    width: 90vw;
+  }
+
+  .hello-text {
+    font-size: 135px;
+
+    stroke-width: 2;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .handwriting-wrapper {
+    width: 94vw;
+  }
+
+  .hello-text {
+    font-size: 125px;
+
+    stroke-width: 1.8;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hello-text {
+    animation: none;
+
+    stroke-dashoffset: 0;
+
+    fill: #ffffff;
+  }
+
+  .intro-screen {
+    transition: none;
+  }
+
+}
+
+/* =========================================================
+   WELCOME MESSAGE
+   ========================================================= */
+
+.intro-subtitle {
+  position: absolute;
+
+  top: 72%;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  margin: 0;
+
+  white-space: nowrap;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-family: "Saira", sans-serif;
+
+  font-size: 0.85rem;
+
+  font-weight: 300;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+
+  opacity: 0;
+
+  animation:
+    welcomeAppear 0.8s ease
+    3.45s forwards;
+}
+
+
+@keyframes welcomeAppear {
+
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+  .intro-subtitle {
+    top: 73%;
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.12em;
+  }
+
+}

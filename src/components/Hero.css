@@ -1,12 +1,14 @@
 .hero-section {
   background: linear-gradient(
     180deg,
-    #111111 0%,
-    #1a1a1a 50%,
-    #111111 100%
+    var(--bg-primary) 0%,
+    var(--bg-secondary) 50%,
+    var(--bg-primary) 100%
   );
 
   font-family: "Saira", sans-serif;
+
+  transition: background 0.35s ease;
 }
 
 .hero-grid {
@@ -15,145 +17,204 @@
 
 .hero-name {
   font-family: "Saira", sans-serif;
+
   font-weight: 800;
-  color: #ffffff;
+
+  color: var(--text-primary);
+
   letter-spacing: -0.03em;
+
   font-size: 4.5rem;
+
   line-height: 1.1;
 }
 
 .hero-subtitle {
-  color: white;
+  color: var(--text-primary);
+
   font-size: 3.5rem;
+
   line-height: 1.2;
+
   margin-bottom: 4px;
+
   font-weight: 300;
 }
 
 .role-badge {
   font-weight: 300;
+
   letter-spacing: 0.25em;
+
   text-transform: uppercase;
+
   font-size: 1.125rem;
-  color: #c084fc;
+
+  color: var(--accent-light);
 }
 
 .role-line {
   width: 24px;
   height: 1px;
+
   background: linear-gradient(
     90deg,
-    #8b5cf6,
-    #ec4899
+    var(--accent),
+    var(--accent-pink)
   );
 }
 
 .hero-description {
-  color: rgba(180, 180, 200, 0.65);
+  color: var(--text-secondary);
+
   font-weight: 300;
+
   line-height: 1.8;
+
   font-size: 1rem;
+
   max-width: 440px;
 }
+
 
 /* Buttons */
 
 .btn-primary {
   position: relative;
+
   overflow: hidden;
+
   background: linear-gradient(
     135deg,
-    #8b5cf6,
-    #7c3aed
+    var(--accent),
+    var(--accent-dark)
   );
 
   border: none;
+
   transition: all 0.3s ease;
+
   letter-spacing: 0.05em;
-  color: white;
+
+  color: #ffffff;
+
   padding: 12px 28px;
+
   border-radius: 10px;
+
   font-size: 0.875rem;
+
   font-weight: 500;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
 
-  box-shadow: 0 12px 32px rgba(124, 58, 237, 0.4);
+  box-shadow:
+    0 12px 32px rgba(124, 58, 237, 0.4);
 }
 
 .btn-secondary {
-  border: 1px solid rgba(139, 92, 246, 0.4);
-  background: rgba(139, 92, 246, 0.05);
+  border: 1px solid var(--border-strong);
+
+  background: var(--accent-soft);
+
   backdrop-filter: blur(4px);
+
   transition: all 0.3s ease;
+
   letter-spacing: 0.05em;
 
-  color: #d8b4fe;
+  color: var(--accent-light);
+
   padding: 12px 28px;
+
   border-radius: 10px;
+
   font-size: 0.875rem;
+
   font-weight: 500;
 }
 
 .btn-secondary:hover {
-  border-color: rgba(139, 92, 246, 0.8);
+  border-color: var(--accent);
 
-  background: rgba(139, 92, 246, 0.12);
+  background: var(--accent-medium);
 
   transform: translateY(-2px);
 }
+
 
 /* Rings */
 
 .outer-ring {
   position: absolute;
+
   inset: -24px;
-  border: 1px dashed rgba(139, 92, 246, 0.2);
+
+  border: 1px dashed var(--border-strong);
+
   border-radius: 50%;
+
   animation: spin 20s linear infinite;
 }
 
 .second-ring {
   position: absolute;
+
   inset: -48px;
+
   border: 1px solid rgba(236, 72, 153, 0.08);
+
   border-radius: 50%;
+
   animation: spin 30s linear infinite reverse;
 }
+
 
 /* Image */
 
 .glow-border {
   position: relative;
+
   width: 280px;
   height: 280px;
+
   border-radius: 50%;
 }
 
 .glow-border::before {
   content: "";
+
   position: absolute;
+
   inset: -2px;
+
   border-radius: 50%;
+
   background: conic-gradient(
     from 180deg,
-    #8b5cf6,
-    #ec4899,
-    #8b5cf6
+    var(--accent),
+    var(--accent-pink),
+    var(--accent)
   );
 
   z-index: -1;
+
   animation: spin 6s linear infinite;
+
   opacity: 0.8;
 }
 
 .glow-border::after {
   content: "";
+
   position: absolute;
+
   inset: -8px;
+
   border-radius: 50%;
+
   background: conic-gradient(
     from 180deg,
     rgba(139, 92, 246, 0.2),
@@ -163,64 +224,95 @@
   );
 
   z-index: -2;
+
   animation: spin 6s linear infinite;
+
   filter: blur(8px);
 }
 
 .hero-image {
   width: 280px;
   height: 280px;
+
   border-radius: 50%;
+
   object-fit: cover;
+
   object-position: top;
+
   display: block;
+
   position: relative;
+
   z-index: 1;
 }
+
 
 /* Badge */
 
 .floating-badge {
   position: absolute;
+
   bottom: -12px;
   right: -20px;
-  background: rgba(15, 15, 25, 0.9);
-  border: 1px solid rgba(139, 92, 246, 0.35);
+
+  background: var(--bg-card-solid);
+
+  border: 1px solid var(--border-strong);
+
   border-radius: 12px;
+
   padding: 10px 16px;
+
   backdrop-filter: blur(12px);
+
   z-index: 10;
+
+  box-shadow: 0 8px 25px var(--shadow-card);
 }
 
 .badge-content {
   display: flex;
+
   align-items: center;
+
   gap: 8px;
 }
 
 .badge-dot {
   width: 8px;
   height: 8px;
+
   border-radius: 50%;
+
   background: #22c55e;
+
   box-shadow: 0 0 8px #22c55e;
 }
 
 .badge-text {
   font-size: 0.7rem;
+
   letter-spacing: 0.1em;
+
   text-transform: uppercase;
-  color: rgba(200, 210, 220, 0.8);
+
+  color: var(--text-secondary);
+
   font-weight: 400;
 }
+
 
 /* Bottom Line */
 
 .bottom-line {
   position: absolute;
+
   bottom: 0;
+
   left: 0;
   right: 0;
+
   height: 1px;
 
   background: linear-gradient(
@@ -231,10 +323,182 @@
   );
 }
 
+
 /* Animations */
 
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   HERO RESUME BUTTON
+   ========================================================= */
+
+/* =========================================
+   HERO RESUME / VIEW CV BUTTON
+   ========================================= */
+
+/* =========================================
+   CV BUTTON
+   ========================================= */
+
+/* =========================================
+   CV CONNECTION AREA
+   ========================================= */
+
+.cv-connection {
+  position: absolute;
+
+  width: 175px;
+  height: 125px;
+
+  right: -135px;
+  bottom: 35px;
+
+  overflow: visible;
+  z-index: 14;
+  pointer-events: none;
+}
+
+
+/* =========================================
+   MAIN HAND-DRAWN STROKE
+   ========================================= */
+
+.cv-arrow-line {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.95;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: drawCvArrow 1.5s ease-out forwards;
+}
+
+.cv-arrow-head {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.95;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: drawCvArrowHead 0.4s ease-out 1.15s forwards;
+}
+
+@keyframes drawCvArrow {
+  from {
+    stroke-dashoffset: 1;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawCvArrowHead {
+  from {
+    stroke-dashoffset: 1;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* =========================================
+   DOWNLOAD CV BUTTON
+   ========================================= */
+
+.hero-resume-btn {
+  position: absolute;
+
+  /*
+    Button is ABOVE the arrow tip.
+  */
+  right: -185px;
+  bottom: 130px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 22px;
+
+  border-radius: 9999px;
+
+  font-family: "Saira", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+
+  letter-spacing: 0.06em;
+
+  color: var(--accent-light);
+
+  background: rgba(17, 17, 17, 0.78);
+
+  border: 1px solid var(--border-strong);
+
+  text-decoration: none;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  z-index: 20;
+}
+
+
+/* =========================================
+   BUTTON HOVER
+   ========================================= */
+
+.hero-resume-btn:hover {
+  color: var(--text-primary);
+
+  background: var(--accent-medium);
+
+  border-color: var(--accent);
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.35),
+    0 0 25px var(--accent-soft);
+}
+
+
+/* =========================================
+   BUTTON ACTIVE
+   ========================================= */
+
+.hero-resume-btn:active {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .hero-resume-btn {
+    right: -125px;
+    bottom: 0;
+    padding: 8px 15px;
+    font-size: 0.72rem;
+  }
+
+  .cv-connection {
+    right: -85px;
+    bottom: 12px;
+    width: 120px;
+    height: 85px;
   }
 }

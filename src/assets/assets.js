@@ -35,7 +35,7 @@ export const projects = [
   {
     title: "E-Commerce Platform",
     description:
-      "A full-stack e-commerce platform currently under development featuring product management, authentication, and cart functionality.",
+      "A full-stack e-commerce platform featuring product management, authentication, and cart functionality.",
     image: "/project-2.jpg", // make sure this image exists in public folder
     tech: [
       "React (Frontend)",
@@ -44,8 +44,6 @@ export const projects = [
       "REST API",
       "JWT Auth",
     ],
-    icons: [FaReact, FaNodeJs, FaDatabase, FaStripe],
-    demo: "https://j-m-portfolio-tau.vercel.app/",
     code: "https://github.com/jitmondal-it/ecommerce-project",
   },
   {
@@ -63,9 +61,20 @@ export const projects = [
     "JWT Authentication",
     "Axios",
   ],
-  //icons: [FaReact, FaJava, FaDatabase],
-  demo: "#",
   code: "https://github.com/jitmondal-it/HireSphere",
+},
+{
+  title: "Email Sender Application",
+  description:
+    "A full-stack email-sending application that allows users to securely send emails using Gmail API with OAuth2 authentication.",
+  tech: [
+    "React (Frontend)",
+    "Spring Boot (Backend)",
+    "Gmail API",
+    "OAuth2 Authentication",
+    "REST API",
+  ],
+  code: "https://github.com/jitmondal-it/email-sender-application",
 },
   
 ];

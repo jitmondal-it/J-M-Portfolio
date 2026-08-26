@@ -1,17 +1,30 @@
 .footer {
   position: relative;
+
   overflow: hidden;
-  background: #0f0f14;
+
+  background: var(--bg-primary);
+
+  color: var(--text-primary);
+
   font-family: "Saira", sans-serif;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease;
 }
+
 
 /* Top Line */
 
 .footer-top-line {
   position: absolute;
+
   top: 0;
+
   left: 10%;
   right: 10%;
+
   height: 1px;
 
   background: linear-gradient(
@@ -22,82 +35,104 @@
   );
 }
 
+
 /* Content */
 
 .footer-content {
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: space-between;
+
   gap: 12px;
+
   text-align: center;
 }
+
 
 /* Logo */
 
 .footer-logo {
   font-weight: 700;
+
   font-size: 0.95rem;
+
   letter-spacing: -0.02em;
-  color: #fff;
+
+  color: var(--text-primary);
 }
 
 .footer-logo span {
   background: linear-gradient(
     135deg,
-    #c4b5fd,
-    #ec4899
+    var(--accent-light),
+    var(--accent-pink)
   );
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
   background-clip: text;
 }
+
 
 /* Social Buttons */
 
 .footer-socials {
   display: flex;
+
   align-items: center;
+
   gap: 12px;
 }
 
 .footer-social-btn {
   width: 36px;
   height: 36px;
+
   border-radius: 10px;
 
-  background: rgba(139, 92, 246, 0.07);
+  background: var(--accent-soft);
 
-  border: 1px solid rgba(139, 92, 246, 0.18);
+  border: 1px solid var(--border);
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
-  color: #c4b5fd;
+  color: var(--accent-light);
+
   font-size: 0.95rem;
+
   text-decoration: none;
 
   transition: all 0.25s ease;
 }
 
 .footer-social-btn:hover {
-  background: rgba(139, 92, 246, 0.18);
+  background: var(--accent-medium);
 
-  border-color: rgba(139, 92, 246, 0.45);
+  border-color: var(--accent);
 
-  color: #fff;
+  color: var(--text-primary);
 
   transform: translateY(-2px);
 }
+
 
 /* Copyright */
 
 .footer-copy {
   font-size: 0.72rem;
+
   font-weight: 300;
+
   letter-spacing: 0.08em;
 
-  color: rgba(200, 200, 220, 0.3);
+  color: var(--text-soft);
 }

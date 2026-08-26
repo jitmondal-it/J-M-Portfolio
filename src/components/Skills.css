@@ -1,9 +1,9 @@
 .skills-wrapper {
   background: linear-gradient(
     180deg,
-    #111111 0%,
-    #1a1a1a 50%,
-    #111111 100%
+    var(--bg-primary) 0%,
+    var(--bg-secondary) 50%,
+    var(--bg-primary) 100%
   );
 }
 
@@ -15,19 +15,26 @@
   z-index: 0;
 }
 
+
 /* Heading */
 
 .skills-heading-top {
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   gap: 12px;
+
   margin-bottom: 16px;
 }
 
 .heading-line {
   display: inline-block;
+
   width: 24px;
+
   height: 1px;
 }
 
@@ -35,62 +42,81 @@
   background: linear-gradient(
     90deg,
     transparent,
-    #8b5cf6
+    var(--accent)
   );
 }
 
 .heading-line.right {
   background: linear-gradient(
     90deg,
-    #8b5cf6,
+    var(--accent),
     transparent
   );
 }
 
 .skills-tag-label {
   font-weight: 300;
+
   letter-spacing: 0.25em;
+
   text-transform: uppercase;
+
   font-size: 0.72rem;
-  color: #c4b5fd;
+
+  color: var(--accent-light);
 }
 
 .skills-heading {
   font-weight: 800;
+
   letter-spacing: -0.03em;
+
   font-size: 3rem;
-  color: #fff;
+
+  color: var(--text-primary);
+
   margin-bottom: 16px;
 }
 
 .skills-heading span {
   background: linear-gradient(
     135deg,
-    #c4b5fd,
-    #ec4899
+    var(--accent-light),
+    var(--accent-pink)
   );
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
   background-clip: text;
 }
 
 .skills-subtitle {
-  color: rgba(200, 200, 220, 0.5);
+  color: var(--text-muted);
+
   font-weight: 300;
+
   font-size: 0.95rem;
+
   max-width: 420px;
+
   margin: 0 auto;
+
   line-height: 1.8;
 }
+
 
 /* Skill Card */
 
 .skill-card {
   position: relative;
-  background: rgba(26, 26, 26, 0.75);
-  border: 1px solid rgba(139, 92, 246, 0.14);
+
+  background: var(--bg-card);
+
+  border: 1px solid var(--border);
+
   border-radius: 20px;
+
   padding: 28px;
 
   transition: all 0.35s ease;
@@ -98,15 +124,20 @@
   backdrop-filter: blur(8px);
 
   overflow: hidden;
+
   cursor: pointer;
 }
 
 .skill-card::before {
   content: "";
+
   position: absolute;
+
   top: -1px;
+
   left: 15%;
   right: 15%;
+
   height: 1px;
 
   background: linear-gradient(
@@ -121,11 +152,15 @@
 
 .skill-card::after {
   content: "";
+
   position: absolute;
+
   bottom: 0;
+
   left: 0;
 
   width: 60px;
+
   height: 60px;
 
   background: radial-gradient(
@@ -138,26 +173,32 @@
 }
 
 .skill-card:hover {
-  border-color: rgba(139, 92, 246, 0.32);
+  border-color: var(--border-strong);
 
   transform: translateY(-6px);
 
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4),
+  box-shadow:
+    0 20px 50px var(--shadow-dark),
     0 0 40px rgba(124, 58, 237, 0.08);
 }
+
 
 /* Header */
 
 .skill-header {
   display: flex;
+
   align-items: center;
+
   gap: 16px;
+
   margin-bottom: 20px;
 }
 
 .skill-icon-box {
   width: 48px;
   height: 48px;
+
   border-radius: 14px;
 
   background: linear-gradient(
@@ -166,15 +207,17 @@
     rgba(236, 72, 153, 0.1)
   );
 
-  border: 1px solid rgba(139, 92, 246, 0.22);
+  border: 1px solid var(--border-strong);
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   flex-shrink: 0;
 
-  color: #c4b5fd;
+  color: var(--accent-light);
 
   transition: all 0.3s ease;
 }
@@ -186,17 +229,22 @@
     rgba(236, 72, 153, 0.18)
   );
 
-  border-color: rgba(139, 92, 246, 0.4);
+  border-color: var(--accent);
 
-  box-shadow: 0 0 20px rgba(124, 58, 237, 0.2);
+  box-shadow:
+    0 0 20px rgba(124, 58, 237, 0.2);
 }
 
 .skill-title {
   font-weight: 700;
+
   font-size: 1rem;
-  color: #fff;
+
+  color: var(--text-primary);
+
   letter-spacing: -0.01em;
 }
+
 
 /* Divider */
 
@@ -212,44 +260,56 @@
   margin-bottom: 16px;
 }
 
+
 /* Description */
 
 .skill-description {
-  color: rgba(200, 200, 220, 0.55);
+  color: var(--text-muted);
+
   font-size: 0.83rem;
+
   font-weight: 300;
+
   line-height: 1.75;
+
   margin-bottom: 18px;
 }
+
 
 /* Tags */
 
 .skill-tags {
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 8px;
 }
 
 .tech-tag {
   padding: 4px 12px;
+
   border-radius: 9999px;
+
   font-size: 0.72rem;
+
   font-weight: 400;
+
   letter-spacing: 0.04em;
 
-  color: rgba(200, 200, 230, 0.6);
+  color: var(--text-secondary);
 
-  background: rgba(139, 92, 246, 0.08);
+  background: var(--accent-soft);
 
-  border: 1px solid rgba(139, 92, 246, 0.14);
+  border: 1px solid var(--border);
 
   transition: all 0.2s ease;
 }
 
 .tech-tag:hover {
-  color: #fff;
+  color: var(--text-primary);
 
-  background: rgba(139, 92, 246, 0.2);
+  background: var(--accent-medium);
 
-  border-color: rgba(139, 92, 246, 0.35);
+  border-color: var(--border-strong);
 }

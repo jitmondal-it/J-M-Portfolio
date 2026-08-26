@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si"; 
 import "./Footer.css";
 
 const Footer = () => {
@@ -29,12 +30,22 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/jit-mondal-493a26283/"
+              href="https://www.linkedin.com/in/jit-mondal-dev/"
               target="_blank"
               rel="noreferrer"
               className="footer-social-btn"
             >
               <FaLinkedin />
+            </a>
+
+            
+            <a
+              href="https://leetcode.com/u/Jit_Mondal2411/"
+              target="_blank"
+              rel="noreferrer"
+              className="footer-social-btn"
+            >
+              <SiLeetcode  />
             </a>
           </div>
 

@@ -4,6 +4,7 @@ import "./Hero.css";
 
 const Hero = () => {
   return (
+
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -11,6 +12,15 @@ const Hero = () => {
       id="home"
       className="hero-section relative min-h-screen flex items-center overflow-hidden"
     >
+
+      {/* <a
+        href="/CV_JM.pdf"
+        className="hero-resume-btn"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Download CV
+      </a> */}
       {/* SVG Grid */}
       <div className="hero-grid absolute inset-0 pointer-events-none">
         <svg
@@ -151,6 +161,53 @@ const Hero = () => {
                 </span>
               </div>
             </motion.div>
+
+{/* Curved hand-drawn connection to CV */}
+<svg
+  className="cv-connection"
+  viewBox="0 0 180 130"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+>
+  {/* Main hand-drawn stroke:
+      starts from the photo → loop → points toward Download CV */}
+  <path
+  className="cv-arrow-line"
+  pathLength="1"
+  d="
+    M 48 72
+    C 53 80, 61 87, 71 88
+    C 82 89, 87 82, 83 77
+    C 79 72, 73 77, 77 83
+    C 82 91, 96 91, 106 82
+    C 116 73, 119 60, 122 48
+  "
+/>
+
+  {/* Arrow head */}
+  <path
+    className="cv-arrow-head"
+    pathLength="1"
+    d="M 122 48 C 117 51, 113 54, 110 59"
+  />
+
+  <path
+    className="cv-arrow-head"
+    pathLength="1"
+    d="M 122 48 C 121 54, 121 59, 123 64"
+  />
+</svg>
+
+{/* CV Button */}
+<a
+  href="/CV_JM.pdf"
+  className="hero-resume-btn"
+  target="_blank"
+  rel="noreferrer"
+>
+  Download CV
+</a>
           </div>
         </motion.div>
       </div>
