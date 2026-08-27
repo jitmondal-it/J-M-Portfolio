@@ -7,7 +7,6 @@
   );
 
   font-family: "Saira", sans-serif;
-
   transition: background 0.35s ease;
 }
 
@@ -15,48 +14,38 @@
   z-index: 0;
 }
 
+/* =========================================
+   HERO TEXT
+   ========================================= */
+
 .hero-name {
   font-family: "Saira", sans-serif;
-
   font-weight: 800;
-
   color: var(--text-primary);
-
   letter-spacing: -0.03em;
-
   font-size: 4.5rem;
-
   line-height: 1.1;
 }
 
 .hero-subtitle {
   color: var(--text-primary);
-
   font-size: 3.5rem;
-
   line-height: 1.2;
-
   margin-bottom: 4px;
-
   font-weight: 300;
 }
 
 .role-badge {
   font-weight: 300;
-
   letter-spacing: 0.25em;
-
   text-transform: uppercase;
-
   font-size: 1.125rem;
-
   color: var(--accent-light);
 }
 
 .role-line {
   width: 24px;
   height: 1px;
-
   background: linear-gradient(
     90deg,
     var(--accent),
@@ -66,130 +55,107 @@
 
 .hero-description {
   color: var(--text-secondary);
-
   font-weight: 300;
-
   line-height: 1.8;
-
   font-size: 1rem;
-
   max-width: 440px;
 }
 
-
-/* Buttons */
+/* =========================================
+   MAIN BUTTONS
+   ========================================= */
 
 .btn-primary {
   position: relative;
-
   overflow: hidden;
-
   background: linear-gradient(
     135deg,
     var(--accent),
     var(--accent-dark)
   );
-
   border: none;
-
   transition: all 0.3s ease;
-
   letter-spacing: 0.05em;
-
   color: #ffffff;
-
   padding: 12px 28px;
-
   border-radius: 10px;
-
   font-size: 0.875rem;
-
   font-weight: 500;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-
-  box-shadow:
-    0 12px 32px rgba(124, 58, 237, 0.4);
+  box-shadow: 0 12px 32px rgba(124, 58, 237, 0.4);
 }
 
 .btn-secondary {
   border: 1px solid var(--border-strong);
-
   background: var(--accent-soft);
-
   backdrop-filter: blur(4px);
-
   transition: all 0.3s ease;
-
   letter-spacing: 0.05em;
-
   color: var(--accent-light);
-
   padding: 12px 28px;
-
   border-radius: 10px;
-
   font-size: 0.875rem;
-
   font-weight: 500;
 }
 
 .btn-secondary:hover {
   border-color: var(--accent);
-
   background: var(--accent-medium);
-
   transform: translateY(-2px);
 }
 
+/* =========================================
+   PHOTO SECTION
+   ========================================= */
 
-/* Rings */
+.hero-image-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container around photo + rings + CV */
+.hero-photo-container {
+  position: relative;
+}
+
+/* =========================================
+   RINGS
+   ========================================= */
 
 .outer-ring {
   position: absolute;
-
   inset: -24px;
-
   border: 1px dashed var(--border-strong);
-
   border-radius: 50%;
-
   animation: spin 20s linear infinite;
 }
 
 .second-ring {
   position: absolute;
-
   inset: -48px;
-
   border: 1px solid rgba(236, 72, 153, 0.08);
-
   border-radius: 50%;
-
   animation: spin 30s linear infinite reverse;
 }
 
-
-/* Image */
+/* =========================================
+   IMAGE
+   ========================================= */
 
 .glow-border {
   position: relative;
-
-  width: 280px;
-  height: 280px;
-
   border-radius: 50%;
 }
 
 .glow-border::before {
   content: "";
-
   position: absolute;
-
   inset: -2px;
-
   border-radius: 50%;
 
   background: conic-gradient(
@@ -200,19 +166,14 @@
   );
 
   z-index: -1;
-
   animation: spin 6s linear infinite;
-
   opacity: 0.8;
 }
 
 .glow-border::after {
   content: "";
-
   position: absolute;
-
   inset: -8px;
-
   border-radius: 50%;
 
   background: conic-gradient(
@@ -224,42 +185,32 @@
   );
 
   z-index: -2;
-
   animation: spin 6s linear infinite;
-
   filter: blur(8px);
 }
 
 .hero-image {
-  width: 280px;
-  height: 280px;
-
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-
   object-fit: cover;
-
   object-position: top;
-
   display: block;
-
   position: relative;
-
   z-index: 1;
 }
 
-
-/* Badge */
+/* =========================================
+   AVAILABLE FOR WORK BADGE
+   ========================================= */
 
 .floating-badge {
   position: absolute;
-
   bottom: -12px;
   right: -20px;
 
   background: var(--bg-card-solid);
-
   border: 1px solid var(--border-strong);
-
   border-radius: 12px;
 
   padding: 10px 16px;
@@ -273,79 +224,29 @@
 
 .badge-content {
   display: flex;
-
   align-items: center;
-
   gap: 8px;
 }
 
 .badge-dot {
   width: 8px;
   height: 8px;
-
   border-radius: 50%;
 
   background: #22c55e;
-
   box-shadow: 0 0 8px #22c55e;
 }
 
 .badge-text {
   font-size: 0.7rem;
-
   letter-spacing: 0.1em;
-
   text-transform: uppercase;
-
   color: var(--text-secondary);
-
   font-weight: 400;
 }
 
-
-/* Bottom Line */
-
-.bottom-line {
-  position: absolute;
-
-  bottom: 0;
-
-  left: 0;
-  right: 0;
-
-  height: 1px;
-
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(139, 92, 246, 0.2),
-    transparent
-  );
-}
-
-
-/* Animations */
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* =========================================================
-   HERO RESUME BUTTON
-   ========================================================= */
-
 /* =========================================
-   HERO RESUME / VIEW CV BUTTON
-   ========================================= */
-
-/* =========================================
-   CV BUTTON
-   ========================================= */
-
-/* =========================================
-   CV CONNECTION AREA
+   CV ARROW
    ========================================= */
 
 .cv-connection {
@@ -358,69 +259,71 @@
   bottom: 35px;
 
   overflow: visible;
+
   z-index: 14;
   pointer-events: none;
 }
 
-
 /* =========================================
-   MAIN HAND-DRAWN STROKE
+   CV ANIMATED STROKE
    ========================================= */
 
-.cv-arrow-line {
-  fill: none;
-  stroke: var(--accent);
-  stroke-width: 1.6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  opacity: 0.95;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  animation: drawCvArrow 1.5s ease-out forwards;
-}
-
+.cv-arrow-line,
 .cv-arrow-head {
   fill: none;
+
   stroke: var(--accent);
   stroke-width: 1.6;
+
   stroke-linecap: round;
   stroke-linejoin: round;
+
   opacity: 0.95;
+
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
-  animation: drawCvArrowHead 0.4s ease-out 1.15s forwards;
-}
 
-@keyframes drawCvArrow {
-  from {
-    stroke-dashoffset: 1;
-  }
-
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes drawCvArrowHead {
-  from {
-    stroke-dashoffset: 1;
-  }
-
-  to {
-    stroke-dashoffset: 0;
-  }
+  animation: cvStrokeLoop 6s ease-in-out infinite;
 }
 
 /* =========================================
-   DOWNLOAD CV BUTTON
+   CV STROKE ANIMATION
+   ========================================= */
+
+@keyframes cvStrokeLoop {
+
+  /* Completely hidden */
+  0% {
+    stroke-dashoffset: 1;
+  }
+
+  /* Draw everything */
+  18% {
+    stroke-dashoffset: 0;
+  }
+
+  /* Stay visible */
+  65% {
+    stroke-dashoffset: 0;
+  }
+
+  /* Disappear */
+  82% {
+    stroke-dashoffset: 1;
+  }
+
+  /* Small pause before drawing again */
+  100% {
+    stroke-dashoffset: 1;
+  }
+}
+/* =========================================
+   DOWNLOAD CV
    ========================================= */
 
 .hero-resume-btn {
   position: absolute;
 
-  /*
-    Button is ABOVE the arrow tip.
-  */
   right: -185px;
   bottom: 130px;
 
@@ -435,7 +338,6 @@
   font-family: "Saira", sans-serif;
   font-size: 0.78rem;
   font-weight: 500;
-
   letter-spacing: 0.06em;
 
   color: var(--accent-light);
@@ -459,11 +361,6 @@
   z-index: 20;
 }
 
-
-/* =========================================
-   BUTTON HOVER
-   ========================================= */
-
 .hero-resume-btn:hover {
   color: var(--text-primary);
 
@@ -478,13 +375,39 @@
     0 0 25px var(--accent-soft);
 }
 
-
-/* =========================================
-   BUTTON ACTIVE
-   ========================================= */
-
 .hero-resume-btn:active {
   transform: translateY(-1px);
+}
+
+/* =========================================
+   BOTTOM LINE
+   ========================================= */
+
+.bottom-line {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 92, 246, 0.2),
+    transparent
+  );
+}
+
+/* =========================================
+   ANIMATION
+   ========================================= */
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* =========================================
@@ -492,6 +415,7 @@
    ========================================= */
 
 @media (max-width: 900px) {
+
   .hero-resume-btn {
     right: -150px;
     bottom: 105px;
@@ -509,64 +433,69 @@
   }
 }
 
-
 /* =========================================
    MOBILE
    ========================================= */
 
 @media (max-width: 768px) {
+
   .hero-resume-btn {
     right: -105px;
     bottom: 75px;
 
     padding: 8px 15px;
+
     font-size: 0.70rem;
     letter-spacing: 0.04em;
 
     white-space: nowrap;
   }
 
+  /* Hide decorative CV arrow on mobile */
   .cv-connection {
-    width: 115px;
-    height: 85px;
+    display: none;
+  }
 
-    right: -70px;
-    bottom: 5px;
+  .floating-badge {
+    right: -15px;
+    bottom: -10px;
 
-    z-index: 14;
+    padding: 8px 12px;
+  }
+
+  .badge-text {
+    font-size: 0.62rem;
   }
 }
-
 
 /* =========================================
    SMALL MOBILE
    ========================================= */
 
 @media (max-width: 480px) {
+
   .hero-resume-btn {
-    right: -82px;
-    bottom: 58px;
+    right: -75px;
+    bottom: 55px;
 
     padding: 7px 12px;
+
     font-size: 0.64rem;
-    letter-spacing: 0.03em;
   }
 
-  .cv-connection {
-    width: 90px;
-    height: 68px;
+  .floating-badge {
+    right: -10px;
+    bottom: -10px;
 
-    right: -52px;
-    bottom: 0;
+    padding: 7px 10px;
   }
-}
 
-/* =========================================
-   MOBILE — HIDE CV STROKE
-   ========================================= */
+  .badge-dot {
+    width: 7px;
+    height: 7px;
+  }
 
-@media (max-width: 768px) {
-  .cv-connection {
-    display: none;
+  .badge-text {
+    font-size: 0.58rem;
   }
 }
